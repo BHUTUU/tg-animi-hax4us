@@ -8,5 +8,5 @@ bash animate.sh
 ```
 # Direct run
 ```
-source <(curl -fsSL "https://github.com/BHUTUU/tg-animi-hax4us/blob/main/animate.sh"
+source <(curl -fsSL "https://git.io/JyBq5")
 ```
