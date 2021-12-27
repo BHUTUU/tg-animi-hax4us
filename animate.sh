@@ -15,9 +15,9 @@ R0="\033[00m"   R1="\033[1;00m"
 if [[ ! -d "$CWD/assets" ]]; then
    mkdir assets >  /dev/null 2>&1
    cd $CWD/assets >  /dev/null 2>&1
-   wget https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/arrow
-   wget https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/header
-   wget https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/banner
+   wget -q https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/arrow
+   wget -q https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/header
+   wget -q https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/banner
 fi
 #<=============PROGRAM=============>#
 signal_SIGINT() {
@@ -39,25 +39,25 @@ banner() {
 status() {
    width=${#1}
    back() {
-      printf "\b\b\b\b"
+      printf "\b\b\b\b\b\b\b\b\b"
       for b in $(seq $width); do
          printf "\b"
       done
    }
    while :;do
-      printf "${R0}•••${R0} $1"
+      printf "${R0}•••${R0} ${1}.    "
       back
       sleep 0.20
-      printf "${R0}${S2}⦁${R0}•• $1"
+      printf "${R0}${S2}⦁${R0}•• ${1}..   "
       back
       sleep 0.10
-      printf "${R0}•${S2}⦁${R0}• $1"
+      printf "${R0}•${S2}⦁${R0}• ${1}...  "
       back
       sleep 0.10
-      printf "${R0}••${S2}⦁${R0} $1"
+      printf "${R0}••${S2}⦁${R0} ${1}.... "
       back
       sleep 0.10
-      printf "${R0}•••${R0} $1"
+      printf "${R0}•••${R0} ${1}....."
       back
       sleep 0.20
    done
