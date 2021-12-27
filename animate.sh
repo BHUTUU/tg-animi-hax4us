@@ -12,15 +12,13 @@ S7="\033[1;37m" B7="\033[1;47m"
 R0="\033[00m"   R1="\033[1;00m"
 #<---x--->#
 #<========REQUIREMENTS===========>#
-files=(banner arrow header)
-for f in "${files[@]}"; do
-   if [[ -f "$CWD/assets/$f" ]]; then
-      if [[ -d "$CWD/assets" ]]; then
-         mkdir assets >  /dev/null 2>&1
-      fi
-      :
-   fi
-done
+if [[ ! -d "$CWD/assets" ]]; then
+   mkdir assets >  /dev/null 2>&1
+   cd $CWD/assets >  /dev/null 2>&1
+   wget https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/arrow
+   wget https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/header
+   wget https://raw.githubusercontent.com/BHUTUU/tg-animi-hax4us/main/assets/banner
+fi
 #<=============PROGRAM=============>#
 signal_SIGINT() {
    printf "\r\033[8A"
