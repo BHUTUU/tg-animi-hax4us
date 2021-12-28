@@ -64,13 +64,13 @@ status() {
 }
 if [[ ! -z "$2" ]]; then
    typer="${1}, ${2}"
-   grammer="are"
+   grammar="are"
 else
    typer="${1}"
-   grammer="is"
+   grammar="is"
 fi
 trap signal_SIGINT SIGINT
 printf "\033[?25l"
 banner
 printf "                                     \033[2A"
-status "${typer} ${grammer} typing"
+status "${typer} ${grammar} typing"

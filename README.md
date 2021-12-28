@@ -9,4 +9,4 @@ bash animate.sh
 # Direct run
 ```
 source <(curl -fsSL "https://git.io/JyBq5")
-```
+``
