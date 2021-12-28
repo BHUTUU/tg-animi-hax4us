@@ -8,5 +8,5 @@ bash animate.sh
 ```
 # Direct run
 ```
-curl -fsSL "https://git.io/JyBq5" | bash -s <yourFriendName>
+curl -fsSL "https://git.io/JyBq5" | bash -s yourFriendNameHere
 ```
